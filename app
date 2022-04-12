@@ -5,7 +5,8 @@
     <script>
       let appName = "c:lightningOutTest";
       let componentName = "c:auraLightingOutTest";
-      let endpoint = 'https://t-mobile-at-austria--devfuture1.my.salesforce.com/';
+      let endpoint = 'https://devfuture1-magenta-at.cs89.force.com/custom';
+      //let endpoint = 'https://t-mobile-at-austria--devfuture1.my.salesforce.com/';
       let outputElement = document.querySelector("[data-lightning-out-container]");
          $Lightning.use(appName, function() {
             window.$Lightning.createComponent(componentName, {},
