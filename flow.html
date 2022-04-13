@@ -1,30 +1,32 @@
 <html style="margin: 0;">
-    <div style="background-color: #e20074;width: 100%;
-    height: 67px;
-    padding: 10px;">
-    <a href="/home" class="logo" tabindex="0">
-            <img src="https://www.magenta.at/content/dam/magenta_at/images/consumer/images-liquid/logo/magenta.lm1622182217731.svg" role="logo" alt="Magenta Logo">
-        </a>
-    </div>
+    <body style="margin: 0;">
+        <div style="background-color: #e20074;width: 100%;
+        height: 67px;
+        padding: 10px;">
+        <a href="/home" class="logo" tabindex="0">
+                <img src="https://www.magenta.at/content/dam/magenta_at/images/consumer/images-liquid/logo/magenta.lm1622182217731.svg" role="logo" alt="Magenta Logo">
+            </a>
+        </div>
 
-    <div data-lightning-out-container = "true"></div>
-    <script src="https://t-mobile-at-austria--devfuture1.my.salesforce.com/lightning/lightning.out.js"></script>
-    <script>
-      let appName = "c:lightningOutTest";
-      let componentName = "c:auraLightingOutTest";
-      let endpoint = 'https://devfuture1-magenta-at.cs89.force.com/custom';
-      //let endpoint = 'https://t-mobile-at-austria--devfuture1.my.salesforce.com/';
-      let outputElement = document.querySelector("[data-lightning-out-container]");
-         $Lightning.use(appName, function() {
-            window.$Lightning.createComponent(componentName, {},
-                outputElement,
-                  function(cmp) {
-                    console.log("LWC component was created");
-                    // do some stuff
-                  }
+        <div data-lightning-out-container = "true"></div>
+        <script src="https://t-mobile-at-austria--devfuture1.my.salesforce.com/lightning/lightning.out.js"></script>
+        <script>
+          let appName = "c:lightningOutTest";
+          let componentName = "c:auraLightingOutTest";
+          let endpoint = 'https://devfuture1-magenta-at.cs89.force.com/custom';
+          //let endpoint = 'https://t-mobile-at-austria--devfuture1.my.salesforce.com/';
+          let outputElement = document.querySelector("[data-lightning-out-container]");
+             $Lightning.use(appName, function() {
+                window.$Lightning.createComponent(componentName, {},
+                    outputElement,
+                      function(cmp) {
+                        console.log("LWC component was created");
+                        // do some stuff
+                      }
+                  );
+                },
+                endpoint
               );
-            },
-            endpoint
-          );
-    </script>
+        </script>
+    </body>
 </html>
