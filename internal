@@ -1,0 +1,36 @@
+<html style="margin: 0;">
+    <body style="margin: 0;">
+        <div style="background-color: #e20074;width: 100%;height: 60px;position: relative;">
+            <a href="/home" class="logo" tabindex="0" style="position: absolute;top: 16px;left: 26px;">
+                <img src="https://i0.wp.com/www.phdata.io/wp-content/uploads/2022/04/Telco-Operations-Performance-Tableau-Dashboard-Example-Featured-Images.jpg" role="logo" alt="Magenta Logo">
+            </a>
+            <div style="float: right;
+                padding: 18px 26px;
+                align-self: center;
+                font-family: arial;
+                color: white;
+                font-size: larger;
+                font-weight: 600;">
+                <div data-lightning-out-container="true" style="padding: 8px 100px;"></div>
+           </div>
+        </div>
+        <script src="https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx/lightning/lightning.out.js"></script>
+        <script>
+          let appName = "c:KXEmployee";
+          let componentName = "c:kxCreateCase";
+          let endpoint = 'https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx';
+          let outputElement = document.querySelector("[data-lightning-out-container]");
+             $Lightning.use(appName, function() {
+                window.$Lightning.createComponent(componentName, {},
+                    outputElement,
+                      function(cmp) {
+                        console.log("LWC component was created");
+                        // do some stuff
+                      }
+                  );
+                },
+                endpoint
+              );
+        </script>
+    </body>
+</html>
