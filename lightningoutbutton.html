@@ -18,7 +18,7 @@
               console.log()
                $Lightning.use(appName, function() {
                    console.log('app')
-                  window.$Lightning.createComponent(componentName, {},
+                  window.$Lightning.createComponent(componentName, {content:'content'},
                       outputElement,
                         function(cmp) {
                           console.log("LWC component was created");
