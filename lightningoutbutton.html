@@ -3,17 +3,21 @@
       <script src="https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx/lightning/lightning.out.js"></script>
         
             <div style="">
-              <button type="button" onclick="onclick="submit();"">Click Me!</button>
+              <button type="button" onclick="onclick="submit();">Click Me!</button>
                 <div data-lightning-out-container="true"></div>
             </div>
         
         <script>
           function submit() {
+              console.log('submit');
             let appName = "c:Integrator";
             let componentName = "c:mIntegrator";
             let endpoint = 'https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx';
             let outputElement = document.querySelector("[data-lightning-out-container]");
+              console.log(JSON.stringify(outputElement));
+              console.log()
                $Lightning.use(appName, function() {
+                   console.log('app')
                   window.$Lightning.createComponent(componentName, {},
                       outputElement,
                         function(cmp) {
