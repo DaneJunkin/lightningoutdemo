@@ -1,0 +1,31 @@
+<html style="margin: 0;">
+    <body style="margin: 0;">
+      <script src="https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx/lightning/lightning.out.js"></script>
+        
+            <div style="">
+              <button type="button" onclick="onclick="submit();"">Click Me!</button>
+                <div data-lightning-out-container="true"></div>
+            </div>
+        
+        <script>
+          function submit() {
+            let appName = "c:Integrator";
+            let componentName = "c:mIntegrator";
+            let endpoint = 'https://playful-panda-nboapk-dev-ed.trailblaze.my.site.com/kx';
+            let outputElement = document.querySelector("[data-lightning-out-container]");
+               $Lightning.use(appName, function() {
+                  window.$Lightning.createComponent(componentName, {},
+                      outputElement,
+                        function(cmp) {
+                          console.log("LWC component was created");
+                          // do some stuff
+                        }
+                    );
+                  },
+                  endpoint
+                );
+          }
+          
+        </script>
+    </body>
+</html>
